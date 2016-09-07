@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="acadgild">
+	<head>
+		<title>Assignment 03</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+		<script>
+			var myapp = angular.module('acadgild', []);
+
+			myapp.controller('mycontroller1', function($scope) {
+				$scope.message = "Hello World from Controller 1";
+			});
+
+			myapp.controller('mycontroller2', function($scope) {
+				$scope.message = "Hello World from controller 2";
+			});
+		</script>
+	</head>
+	<body>
+		<div ng-controller="mycontroller1">
+			<p> {{message}}
+		</div>
+		<div ng-controller="mycontroller2">
+			<p> {{message}}
+		</div>
+	</body>
+</html>
